@@ -1,42 +1,44 @@
-# experimentado-flujos
+# experimentado-flujos 
+# Flujo ADMI
 ```mermaid
 flowchart TD
 
     A[Inicio<br/>Administrador de sede] --> B[Iniciar sesión]
 
-    B -->|Credenciales válidas| C[Panel administrativo]
-    B -->|Credenciales inválidas| Z[Mostrar mensaje de error]
+    B -->|Correcto| C[Panel administrativo]
+    B -->|Error| Z[Mensaje de error]
 
-    %% OPERACIÓN DEL TALLER
-    C --> D[Gestionar disponibilidad del taller]
+    %% DISPONIBILIDAD
+    C --> D[Gestionar disponibilidad]
     D --> D1[Definir jornadas<br/>mañana / tarde-noche]
-    D1 --> D2[Asignar mecánicos por jornada]
-    D2 --> D3[Registrar excepciones<br/>no disponibles]
+    D1 --> D2[Asignar mecánicos a jornadas]
 
+    %% AGENDA
     C --> E[Visualizar agenda diaria]
-    E --> E1[Ver servicios técnicos por fecha]
-    E1 --> E2[Consultar hora y categoría]
+    E --> E1[Ver servicios técnicos]
+    E1 --> E2[Ver carga del taller]
 
+    %% DIAGNÓSTICO
     C --> F[Registrar diagnóstico]
-    F --> F1[Seleccionar servicio atendido]
-    F1 --> F2[Ingresar diagnóstico]
-    F2 --> F3[Generar radicado]
-    F3 --> F4[Enviar correo al cliente]
+    F --> F1[Seleccionar placa]
+    F1 --> F2[Recuperar datos del servicio]
+    F2 --> F3[Ingresar diagnóstico]
+    F3 --> F4[Guardar diagnóstico]
+    F4 --> F5[Generar radicado]
+    F5 --> F6[Enviar correo al cliente]
 
-    %% GESTIÓN DE CATÁLOGO
-    C --> G[Gestionar catálogo]
-    G --> G1[Agregar motocicleta]
-    G --> G2[Editar motocicleta]
-    G --> G3[Actualizar precios y descripciones]
-    G --> G4[Activar / desactivar visibilidad]
+    %% GRÁFICOS
+    C --> G[Consultar gráficos]
+    G --> G1[Ver cotizaciones]
+    G --> G2[Ver intereses en repuestos]
+    G --> G3[Ver carga del taller]
 
-    %% ANÁLISIS Y CONTROL
-    C --> H[Consultar indicadores]
-    H --> H1[Ver cotizaciones realizadas]
-    H --> H2[Ver intereses en repuestos]
-    H --> H3[Ver carga del taller]
+    %% CATÁLOGO
+    C --> H[Gestionar catálogo]
+    H --> H1[Agregar motocicleta]
+    H --> H2[Editar motocicleta]
+    H --> H3[Desactivar motocicleta]
 
     %% NOTIFICACIONES
     C --> I[Recibir notificaciones]
-    I --> I1[Recibir cancelación de cita]
-    I1 --> I2[Reorganizar agenda]
+    I --> I1[Notificación de cancelación]
