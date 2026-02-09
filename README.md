@@ -5,7 +5,7 @@ flowchart TD
 
     A[Inicio<br/>Administrador de sede] --> B[Iniciar sesión]
 
-    B -->|Correcto| C[Panel administrativo]
+    B -->|Credenciales válidas| C[Panel administrativo]
     B -->|Error| Z[Mensaje de error]
 
     %% DISPONIBILIDAD
@@ -15,8 +15,7 @@ flowchart TD
 
     %% AGENDA
     C --> E[Visualizar agenda diaria]
-    E --> E1[Ver servicios técnicos]
-    E1 --> E2[Ver carga del taller]
+    E --> E1[Ver servicios técnicos programados]
 
     %% DIAGNÓSTICO
     C --> F[Registrar diagnóstico]
@@ -27,9 +26,9 @@ flowchart TD
     F4 --> F5[Generar radicado]
     F5 --> F6[Enviar correo al cliente]
 
-    %% GRÁFICOS
-    C --> G[Consultar gráficos]
-    G --> G1[Ver cotizaciones]
+    %% GRÁFICOS / INDICADORES
+    C --> G[Consultar gráficos e indicadores]
+    G --> G1[Ver cotizaciones realizadas]
     G --> G2[Ver intereses en repuestos]
     G --> G3[Ver carga del taller]
 
@@ -42,3 +41,4 @@ flowchart TD
     %% NOTIFICACIONES
     C --> I[Recibir notificaciones]
     I --> I1[Notificación de cancelación]
+
