@@ -28,7 +28,6 @@ flowchart TD
     C --> G[Consultar gráficos e indicadores]
     G --> G1[Ver cotizaciones realizadas]
     G --> G2[Ver intereses en repuestos]
-    G --> G3[Ver carga del taller]
 
     %% CATÁLOGO
     C --> H[Gestionar catálogo]
