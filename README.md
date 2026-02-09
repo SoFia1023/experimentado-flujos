@@ -1,5 +1,4 @@
-# experimentado-flujos 
-# Flujo ADMI
+# Flujo ADMINISTRADOR
 ```mermaid
 flowchart TD
 
