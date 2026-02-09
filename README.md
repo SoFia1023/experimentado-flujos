@@ -4,9 +4,7 @@
 flowchart TD
 
     A[Inicio<br/>Administrador de sede] --> B[Iniciar sesión]
-
-    B -->|Credenciales válidas| C[Panel administrativo]
-    B -->|Error| Z[Mensaje de error]
+    B --> C[Panel administrativo]
 
     %% DISPONIBILIDAD
     C --> D[Gestionar disponibilidad]
@@ -19,14 +17,14 @@ flowchart TD
 
     %% DIAGNÓSTICO
     C --> F[Registrar diagnóstico]
-    F --> F1[Seleccionar placa]
+    F --> F1[Seleccionar placa de la motocicleta]
     F1 --> F2[Recuperar datos del servicio]
     F2 --> F3[Ingresar diagnóstico]
     F3 --> F4[Guardar diagnóstico]
     F4 --> F5[Generar radicado]
     F5 --> F6[Enviar correo al cliente]
 
-    %% GRÁFICOS / INDICADORES
+    %% INDICADORES
     C --> G[Consultar gráficos e indicadores]
     G --> G1[Ver cotizaciones realizadas]
     G --> G2[Ver intereses en repuestos]
@@ -40,5 +38,6 @@ flowchart TD
 
     %% NOTIFICACIONES
     C --> I[Recibir notificaciones]
-    I --> I1[Notificación de cancelación]
+    I --> I1[Notificación de cancelación de cita]
+
 
