@@ -1,4 +1,5 @@
 # experimentado-flujos
+```mermaid
 flowchart TD
 
     A[Inicio<br/>Administrador de sede] --> B[Iniciar sesión]
