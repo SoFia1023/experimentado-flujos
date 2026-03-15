@@ -5,37 +5,32 @@ flowchart TD
     A[Inicio<br/>Administrador de sede] --> B[Iniciar sesión]
     B --> C[Panel administrativo]
 
-    %% DISPONIBILIDAD
-    C --> D[Gestionar disponibilidad]
-    D --> D1[Definir jornadas<br/>mañana / tarde-noche]
-    D1 --> D2[Asignar mecánicos a jornadas]
-
     %% AGENDA
-    C --> E[Visualizar agenda diaria]
-    E --> E1[Ver servicios técnicos programados]
+    C --> D[Visualizar agenda de servicios]
+    D --> D1[Consultar citas por fecha]
+    D1 --> D2[Ver citas por franja horaria]
 
     %% DIAGNÓSTICO
-    C --> F[Registrar diagnóstico]
-    F --> F1[Seleccionar placa de la motocicleta]
-    F1 --> F2[Recuperar datos del servicio]
-    F2 --> F3[Ingresar diagnóstico]
-    F3 --> F4[Guardar diagnóstico]
-    F4 --> F5[Generar radicado]
-    F5 --> F6[Enviar correo al cliente]
+    C --> E[Registrar diagnóstico del servicio]
+    E --> E1[Seleccionar placa de la motocicleta]
+    E1 --> E2[Recuperar datos del servicio]
+    E2 --> E3[Ingresar diagnóstico]
+    E3 --> E4[Guardar diagnóstico]
+    E4 --> E5[Generar radicado]
+    E5 --> E6[Enviar correo al cliente]
 
     %% INDICADORES
-    C --> G[Consultar gráficos e indicadores]
-    G --> G1[Ver cotizaciones realizadas]
-    G --> G2[Ver intereses en repuestos]
+    C --> F[Consultar gráficos e indicadores]
+    F --> F1[Ver cotizaciones realizadas]
+    F --> F2[Ver intereses en repuestos]
 
     %% CATÁLOGO
-    C --> H[Gestionar catálogo]
-    H --> H1[Agregar motocicleta]
-    H --> H2[Editar motocicleta]
-    H --> H3[Desactivar motocicleta]
+    C --> G[Gestionar catálogo de motocicletas]
+    G --> G1[Agregar motocicleta]
+    G --> G2[Editar motocicleta]
+    G --> G3[Desactivar motocicleta]
 
     %% NOTIFICACIONES
-    C --> I[Recibir notificaciones]
-    I --> I1[Notificación de cancelación de cita]
-
+    C --> H[Recibir notificaciones]
+    H --> H1[Notificación de cancelación de cita]
 
